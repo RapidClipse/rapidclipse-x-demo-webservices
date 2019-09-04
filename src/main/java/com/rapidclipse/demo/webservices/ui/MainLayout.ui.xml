@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<?xdevuiml version="1.0"?>
+<?template NONE?>
+<?import com.vaadin.flow.component.button.Button?>
+<?import com.vaadin.flow.component.details.Details?>
+<?import com.vaadin.flow.component.formlayout.FormLayout?>
+<?import com.vaadin.flow.component.formlayout.FormLayout.FormItem?>
+<?import com.vaadin.flow.component.html.Label?>
+<?import com.vaadin.flow.component.orderedlayout.HorizontalLayout?>
+<?import com.vaadin.flow.component.orderedlayout.VerticalLayout?>
+<?import com.vaadin.flow.component.textfield.TextField?>
+<VerticalLayout xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="MainLayout" x:route="">
+    <x:constraints zpos="0" width="100%" height="-1px" />
+    <Details x:name="details" summaryText="Send a simple String" opened="true">
+        <x:constraints width="100px" height="100px" flex-grow="0.0" />
+        <HorizontalLayout x:name="horizontalLayout">
+            <x:constraints zpos="0" width="100%" alignment="AUTO" height="-1px" flex-grow="0.0" />
+            <FormLayout x:name="formLayout">
+                <x:responsiveSteps>
+                    <entry minWidth="0px" columns="1" labelsPosition="TOP" />
+                    <entry minWidth="500px" columns="2" labelsPosition="TOP" />
+                    <entry minWidth="1000px" columns="3" labelsPosition="ASIDE" />
+                </x:responsiveSteps>
+                <x:constraints width="100%" height="-1px" flex-grow="0.0" />
+                <FormItem x:name="formItem">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="label2" text="String to send">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtSource">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                    <Button x:name="cmdSend" text="Send">
+                        <x:constraints width="0px" height="0px" />
+                        <x:event>click.onComponentEvent</x:event>
+                    </Button>
+                    <Button x:name="cmdSendSecure" text="Send Secure">
+                        <x:icon src="com.vaadin.flow.component.icon.VaadinIcon#LOCK" />
+                        <x:constraints width="0px" height="0px" />
+                        <x:event>click.onComponentEvent</x:event>
+                    </Button>
+                </FormItem>
+                <FormItem x:name="formItem2">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="label3" text="Response">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtResponse">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+            </FormLayout>
+            <VerticalLayout x:name="verticalLayout2">
+                <x:constraints width="0px" height="0px" flex-grow="0.0" />
+                <Label x:name="label4" text="Hints">
+                    <x:constraints width="0px" height="0px" flex-grow="0.0" />
+                </Label>
+                <Label x:name="label5" text="1. This application has to be started by a Tomcat ">
+                    <x:constraints width="0px" height="0px" flex-grow="0.0" />
+                </Label>
+                <Label x:name="label6" text="2. Maybe it is necessary to change the URL which is used in the code.">
+                    <x:constraints width="0px" height="0px" flex-grow="0.0" />
+                </Label>
+                <Label x:name="label7" text="3. For &quot;Send Secure&quot; with authentication it is necessary to enter the following line to the tomcat-user.xml -- &lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;restconsumer&quot;/&gt;">
+                    <x:constraints width="0px" height="0px" flex-grow="0.0" />
+                </Label>
+            </VerticalLayout>
+        </HorizontalLayout>
+    </Details>
+    <Details x:name="details2" summaryText="Load entity by ID" opened="true">
+        <x:constraints width="100px" height="100px" flex-grow="0.0" />
+        <VerticalLayout x:name="verticalLayout">
+            <x:constraints zpos="0" width="100%" alignment="AUTO" height="-1px" flex-grow="0.0" />
+            <FormLayout x:name="formLayout2">
+                <x:responsiveSteps>
+                    <entry minWidth="0px" columns="1" labelsPosition="TOP" />
+                    <entry minWidth="500px" columns="2" labelsPosition="TOP" />
+                    <entry minWidth="1000px" columns="3" labelsPosition="ASIDE" />
+                </x:responsiveSteps>
+                <x:constraints width="-1px" height="-1px" flex-grow="0.0" />
+                <FormItem x:name="formItem3">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="label" text="CustomerID (ALFKI, ANTON, ...)">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtCustomerIDCall">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                    <Button x:name="cmdLoad" text="Load">
+                        <x:constraints width="0px" height="0px" />
+                        <x:event>click.onComponentEvent</x:event>
+                    </Button>
+                </FormItem>
+            </FormLayout>
+            <FormLayout x:name="form">
+                <x:responsiveSteps>
+                    <entry minWidth="0px" columns="1" labelsPosition="TOP" />
+                    <entry minWidth="500px" columns="2" labelsPosition="TOP" />
+                </x:responsiveSteps>
+                <x:constraints width="0px" height="0px" flex-grow="0.0" />
+                <FormItem x:name="formItem11">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblCustomerid" text="Customerid">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtCustomerid">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+                <FormItem x:name="formItem4">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblPostalcode" text="Postalcode">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtPostalcode">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+                <FormItem x:name="formItem5">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblCompanyname" text="Companyname">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtCompanyname">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+                <FormItem x:name="formItem6">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblCity" text="City">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtCity">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+                <FormItem x:name="formItem7">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblAddress" text="Address">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtAddress">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+                <FormItem x:name="formItem8">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblCountry" text="Country">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtCountry">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+                <FormItem x:name="formItem9">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblPhone" text="Phone">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtPhone">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+                <FormItem x:name="formItem10">
+                    <x:constraints width="0px" height="0px" />
+                    <Label x:name="lblFax" text="Fax">
+                        <x:constraints width="0px" label="true" height="0px" />
+                    </Label>
+                    <TextField x:name="txtFax">
+                        <x:constraints width="100%" height="0px" />
+                    </TextField>
+                </FormItem>
+            </FormLayout>
+        </VerticalLayout>
+    </Details>
+</VerticalLayout>
