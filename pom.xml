@@ -53,7 +53,7 @@
 		<dependency>
 			<groupId>com.rapidclipse</groupId>
 			<artifactId>rap-server-core</artifactId>
-			<version>10.00.00-RAP-RC1-SNAPSHOT</version>
+			<version>10.00.02-RAP-SNAPSHOT</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
 		<dependency>
@@ -74,9 +74,14 @@
 			<version>2.29</version>
 		</dependency>
 		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>2.29</version>
+		</dependency>
+		<dependency>
 			<groupId>com.rapidclipse</groupId>
 			<artifactId>rap-server-persistence-jpa</artifactId>
-			<version>10.00.00-RAP-RC1-SNAPSHOT</version>
+			<version>10.00.02-RAP-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
